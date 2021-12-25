@@ -5,11 +5,11 @@
 #include <time.h>
 #include <windows.h>
 #pragma comment(lib,"winmm.lib")
-void Add(void);
-void Sub(void);
-void Multiply(void);
-void Div(void);
-void clearScreen(void);
+void Add();
+void Sub();
+void Multiply();
+void Div();
+void clearScreen();
  
 int main()
 {
@@ -72,10 +72,11 @@ int main()
 				return 0;
 			default:printf("请重新选择:\n");
 		}
-	} // end of while(1)
+	} // end of while(1)、
+	return 0; 
 } //end of main()
  
-void clearScreen(void){
+void clearScreen(){
     system("cls");//清屏，clean，s(屏幕)
     printf("小学生四则运算程序\n");
     printf("##################\n");
@@ -88,7 +89,7 @@ void clearScreen(void){
     printf("\n\n请输入相应选项的前面的字母(A-E)\n");
 }
  
-void Add(void){
+void Add(){
 	int a,b,i,sum;
 	system("cls");
 	srand(( int )time( 0 ));//随机种子
@@ -106,7 +107,7 @@ void Add(void){
 	}//end of for()
 } //end of jiafa()
  
-void Sub( void )
+void Sub()
 {
    	int a,b,i,ca,c=0,d=0;
 	system("cls");
@@ -129,7 +130,7 @@ void Sub( void )
 		i=c+d;
     }
 }
-void Multiply( void ){
+void Multiply(){
 	int a,b,i,ji;
 	system( "cls" );
 	srand(( int )time( 0 ));
@@ -145,7 +146,7 @@ void Multiply( void ){
     }
 }
  
-void Div( void ){
+void Div(){
 	int a,b,i,shang,c=0,d=0;
 	system( "cls" );
     srand(( int )time( 0 ));
